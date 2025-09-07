@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moore Middle School Math Club</title>
+    <style>
+        /* CSS for styling, updated for black, green, and white theme */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5; /* Light gray background */
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #000000; /* Black */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 0;
+            font-style: italic;
+        }
+        nav {
+            background-color: #008000; /* A shade of green */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #006400; /* Darker green on hover */
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #008000; /* Green for section headers */
+            border-bottom: 2px solid #000000; /* Black accent line */
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px 0;
+        }
+        .calendar {
+            background-color: #f5f5f5; /* Light gray for contrast */
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .calendar h3 {
+            margin-top: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, textarea, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        button {
+            background-color: #008000; /* Green button */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #006400; /* Darker green on hover */
+        }
+        .ask-steve-bubble {
+            background-color: #f5f5f5; /* Light gray bubble background */
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .ask-steve-bubble img {
+            width: 80px;
+            float: left;
+            margin-right: 15px;
+        }
+        .ask-steve-bubble p {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Moore Middle School Math Club</h1>
+            <p>Exploring the world of numbers together!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#about">About Us</a>
+            <a href="#members">Members & Advisor</a>
+            <a href="#meetings">Meetings</a>
+            <a href="#calendar">Calendar</a>
+            <a href="#amc">AMC 8 Info</a>
+            <a href="#join">Join</a>
+            <a href="#ask-steve">Ask Steve</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- About Us Section -->
+        <div id="about" class="section">
+            <h2>About Us</h2>
+            <p>The Moore Middle School Math Club is a place for students to explore their passion for mathematics in a fun and engaging environment. We work on challenging problems, prepare for competitions, and discover the beauty of numbers and logic. Our goal is to build critical thinking skills and show that math is not just about memorization, but about creativity and problem-solving.</p>
+        </div>
+
+        <!-- Members & Advisor Section -->
+        <div id="members" class="section">
+            <h2>Members & Advisor</h2>
+            <h3>Club Members</h3>
+            <ul id="member-list">
+                <!-- JavaScript will populate this list -->
+            </ul>
+            <h3>Club Advisor</h3>
+            <p><strong>[Advisor's Name]</strong> - [Advisor's Title, e.g., Math Teacher]</p>
+        </div>
+
+        <!-- Meetings Section -->
+        <div id="meetings" class="section">
+            <h2>When and Where We Meet</h2>
+            <p><strong>When:</strong> Every [Day of the Week, e.g., Thursday] after school from [Start Time] to [End Time].</p>
+            <p><strong>Where:</strong> [Room Number or Location, e.g., Room 205 in the math wing].</p>
+            <p><em>Check the calendar for any changes or special events.</em></p>
+        </div>
+
+        <!-- Calendar Section -->
+        <div id="calendar" class="section">
+            <h2>Club Calendar</h2>
+            <div class="calendar">
+                <h3>Upcoming Events</h3>
+                <ul id="event-list">
+                    <!-- Events will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- AMC 8 Info Section -->
+        <div id="amc" class="section">
+            <h2>About the AMC 8</h2>
+            <p>The AMC 8 is a 25-question, 40-minute, multiple-choice competition for middle school students, focusing on problem-solving skills. It's a great opportunity to test your math abilities against students from around the country. Our club helps members prepare with practice problems and strategies for success.</p>
+            <p><strong>What is it?</strong> A nationally recognized math competition.</p>
+            <p><strong>When is it?</strong> Typically in November.</p>
+            <p><strong>How do we prepare?</strong> We dedicate several meetings to working through past AMC 8 problems and exploring relevant topics.</p>
+        </div>
+
+        <!-- Join Section -->
+        <div id="join" class="section">
+            <h2>How to Apply or Join</h2>
+            <p>It's easy to join the Math Club! We welcome all students with an interest in mathematics, regardless of experience level. To join, simply fill out the form below. We'll add you to our mailing list and see you at the next meeting!</p>
+            <form id="join-form">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <label for="grade">Grade:</label>
+                <input type="number" id="grade" name="grade" min="6" max="8" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Join the Club!</button>
+            </form>
+            <p id="join-message" style="display: none; margin-top: 10px;"></p>
+        </div>
+
+        <!-- Ask Steve Section -->
+        <div id="ask-steve" class="section">
+            <h2>Ask Steve! (Club Mascot)</h2>
+            <div class="ask-steve-bubble">
+                <img src="https://via.placeholder.com/80/cccccc" alt="Steve the Mascot">
+                <p id="steve-answer">Hello, mathematicians! What's on your mind today?</p>
+            </div>
+            <form id="ask-steve-form" style="margin-top: 20px;">
+                <label for="steveQuestion">Got a math question for Steve?</label>
+                <textarea id="steveQuestion" name="steveQuestion" rows="4" placeholder="Type your question here..." required></textarea>
+                <button type="submit">Ask Steve</button>
+            </form>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>For more information, feel free to contact our club advisor:</p>
+            <p><strong>Email:</strong> [Advisor's Email Address]</p>
+            <p><strong>School Website:</strong> <a href="https://moore.redlandsusd.net/" target="_blank">Moore Middle School</a></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for dynamic content and interactivity
+
+        // Populate members list
+        const members = [
+            "first1 last1",
+            "first2 last2",
+            "first3 last3"
+        ];
+        const memberList = document.getElementById('member-list');
+        members.forEach(member => {
+            const li = document.createElement('li');
+            li.textContent = member;
+            memberList.appendChild(li);
+        });
+
+        // Add events to calendar
+        const events = [
+            "September 15: First Meeting & Pizza Party!",
+            "September 29: Practice AMC 8 Questions",
+            "October 20: Guest Speaker: [Guest Speaker Name]",
+            "November 12: AMC 8 Competition"
+        ];
+        const eventList = document.getElementById('event-list');
+        events.forEach(event => {
+            const li = document.createElement('li');
+            li.textContent = event;
+            eventList.appendChild(li);
+        });
+
+        // Handle "Join the Club" form submission
+        const joinForm = document.getElementById('join-form');
+        const joinMessage = document.getElementById('join-message');
+        joinForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload
+            
+            const fullName = document.getElementById('fullName').value;
+            joinMessage.textContent = `Thanks for your interest, ${fullName}! We've received your application and will be in touch.`;
+            joinMessage.style.display = 'block';
+            joinForm.reset(); // Clear the form
+        });
+
+        // Handle "Ask Steve" form submission
+        const askSteveForm = document.getElementById('ask-steve-form');
+        const steveAnswer = document.getElementById('steve-answer');
+        const steveQuestionInput = document.getElementById('steveQuestion');
+
+        askSteveForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            const question = steveQuestionInput.value.trim();
+            if (question) {
+                // Here's where Steve "answers" the question.
+                steveAnswer.textContent = `Steve says: That's a great question about math! We'll discuss it at our next meeting. Thanks for asking!`;
+                steveQuestionInput.value = ''; // Clear the textarea
+            } else {
+                steveAnswer.textContent = "Steve: Hmm, looks like you didn't ask a question. Try again!";
+            }
+        });
+    </script>
+
+</body>
+</html>
