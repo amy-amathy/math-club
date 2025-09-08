@@ -66,7 +66,8 @@
             padding: 0;
         }
         li {
-            padding: 5px 0;
+            list-style: disc;
+            list-style-position: inside;
         }
         .calendar {
             background-color: #f5f5f5; /* Light gray for contrast */
@@ -113,6 +114,20 @@
             margin: 0;
             overflow: hidden;
         }
+
+        .back-to-top {
+            display: block;
+            width:100%;
+            text-align: end;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #008000; /* Green text */
+            font-size: small;
+        }
+        .back-to-top:hover {
+            font-weight: bold;
+            color: #006400; /* Darker green on hover */
+        }
     </style>
 </head>
 <body>
@@ -129,20 +144,24 @@
             <a href="#about">About Us</a>
             <a href="#members">Members & Advisor</a>
             <a href="#meetings">Meetings</a>
-            <a href="#calendar">Calendar</a>
             <a href="#amc">AMC 8 Info</a>
             <a href="#join">Join</a>
+            <a href="#potw">Problem(s) of the Week</a>
             <a href="#ask-steve">Ask Steve</a>
-            <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <div class="container">
+   <div class="container">
         <!-- About Us Section -->
         <div id="about" class="section">
             <h2>About Us</h2>
             <p>The Moore Middle School Mathletes Club is a place for students to explore their passion for mathematics in a fun and engaging environment. We work on challenging problems, prepare for competitions, and discover the beauty of numbers and logic. Our goal is to build critical thinking skills and show that math is not just about memorization, but about creativity and problem-solving.</p>
+            <p>For more information, feel free to contact us:</p>
+            <p><strong>Email:</strong> amyzho.49557@redlandsschools.net</p>
+            <p><strong>School Website:</strong> <a href="https://moore.redlandsusd.net/" target="_blank">Moore Middle School</a></p>
+            <a href="#top" class="back-to-top">Back to top</a>
         </div>
+    
 
         <!-- Members & Advisor Section -->
         <div id="members" class="section">
@@ -153,25 +172,19 @@
             </ul>
             <h3>Club Advisor</h3>
             <p><strong>Mrs. Shea</strong> - Math Teacher</p>
+            <a href="#top" class="back-to-top">Back to top</a>
         </div>
 
         <!-- Meetings Section -->
         <div id="meetings" class="section">
-            <h2>When and Where We Meet</h2>
+            <h2>Meetings</h2>
             <p><strong>When:</strong> Every Tuesday after school from 3:30 pm to 4:00 pm.</p>
             <p><strong>Where:</strong> Room L-7.</p>
-            <p><em>Check the calendar for any changes or special events.</em></p>
-        </div>
-
-        <!-- Calendar Section -->
-        <div id="calendar" class="section">
-            <h2>Club Calendar</h2>
-            <div class="calendar">
-                <h3>Upcoming Events</h3>
-                <ul id="event-list">
-                    <!-- Events will be dynamically added here -->
-                </ul>
-            </div>
+            <p><strong>Upcoming Events:</strong></p>
+            <ul id="event-list">
+                <!-- Events will be dynamically added here -->
+            </ul>
+            <a href="#top" class="back-to-top">Back to top</a>
         </div>
 
         <!-- AMC 8 Info Section -->
@@ -181,6 +194,7 @@
             <p><strong>What is it?</strong> A nationally recognized math competition.</p>
             <p><strong>When is it?</strong> In January this year.</p>
             <p><strong>How do we prepare?</strong> We dedicate several meetings to working through past AMC 8 problems and exploring relevant topics.</p>
+            <a href="#top" class="back-to-top">Back to top</a>
         </div>
 
         <!-- Join Section -->
@@ -197,6 +211,14 @@
                 <button type="submit">Join the Club!</button>
             </form>
             <p id="join-message" style="display: none; margin-top: 10px;"></p>
+            <a href="#top" class="back-to-top">Back to top</a>
+        </div>
+
+        <!-- Problem(s) of the Week Section -->
+        <div id="potw" class="section">
+            <h2>Problem(s) of the Week</h2>
+            <p>Each week, we feature a math problem related to what we learned that week.</p>
+            <a href="#top" class="back-to-top">Back to top</a>
         </div>
 
         <!-- Ask Steve Section -->
@@ -211,16 +233,9 @@
                 <textarea id="steveQuestion" name="steveQuestion" rows="4" placeholder="Type your question here..." required></textarea>
                 <button type="submit">Ask Steve</button>
             </form>
+            <a href="#top" class="back-to-top">Back to top</a>
         </div>
 
-        <!-- Contact Section -->
-        <div id="contact" class="section">
-            <h2>Contact Us</h2>
-            <p>For more information, feel free to contact us:</p>
-            <p><strong>Email:</strong> amyzho.49557@redlandsschools.net</p>
-            <p><strong>School Website:</strong> <a href="https://moore.redlandsusd.net/" target="_blank">Moore Middle School</a></p>
-        </div>
-    </div>
 
     <script>
         // JavaScript for dynamic content and interactivity
@@ -246,7 +261,6 @@
         const events = [
             "September 16th: First Meeting!",
             "September 23rd - January 1st: Practice AMC 8 Questions and Learn New AMC 8 Topics",
-        
             "January 22nd - 28th: AMC 8 Competition"
         ];
         const eventList = document.getElementById('event-list');
