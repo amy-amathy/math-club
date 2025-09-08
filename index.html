@@ -145,9 +145,9 @@
             <a href="#members">Members & Advisor</a>
             <a href="#meetings">Meetings</a>
             <a href="#amc">AMC 8 Info</a>
-            <a href="#join">Join</a>
             <a href="#potw">Problem(s) of the Week</a>
             <a href="#ask-steve">Ask Steve</a>
+            <a href="#join">Join</a>
         </div>
     </nav>
 
@@ -197,15 +197,6 @@
             <a href="#top" class="back-to-top">Back to top</a>
         </div>
 
-        <!-- Join Section -->
-        <div id="join" class="section">
-            <h2>How to Apply or Join</h2>
-            <p>It's easy to join the Math Club! We welcome all students with an interest in mathematics, regardless of experience level. To join, simply fill out the form below. We'll add you to our mailing list and see you at the next meeting!</p>            
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuoZeDC3ejesWF1gcrHrz_0yvqpsWpbuQFbOUTlstBy3qM1A/viewform?embedded=true" width="900" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            <p id="join-message" style="display: none; margin-top: 10px;"></p>
-            <a href="#top" class="back-to-top">Back to top</a>
-        </div>
-
         <!-- Problem(s) of the Week Section -->
         <div id="potw" class="section">
             <h2>Problem(s) of the Week</h2>
@@ -224,6 +215,14 @@
             <a href="#top" class="back-to-top">Back to top</a>
         </div>
 
+        <!-- Join Section -->
+        <div id="join" class="section">
+            <h2>How to Apply or Join</h2>
+            <p>It's easy to join the Math Club! We welcome all students with an interest in mathematics, regardless of experience level. To join, simply fill out the form below. We'll add you to our mailing list and see you at the next meeting!</p>            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuoZeDC3ejesWF1gcrHrz_0yvqpsWpbuQFbOUTlstBy3qM1A/viewform?embedded=true" width="900" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <p id="join-message" style="display: none; margin-top: 10px;"></p>
+            <a href="#top" class="back-to-top">Back to top</a>
+        </div>
 
     <script>
         // JavaScript for dynamic content and interactivity
@@ -256,24 +255,6 @@
             const li = document.createElement('li');
             li.textContent = event;
             eventList.appendChild(li);
-        });
-
-        // Handle "Ask Steve" form submission
-        const askSteveForm = document.getElementById('ask-steve-form');
-        const steveAnswer = document.getElementById('steve-answer');
-        const steveQuestionInput = document.getElementById('steveQuestion');
-
-        askSteveForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent page reload
-
-            const question = steveQuestionInput.value.trim();
-            if (question) {
-                // Here's where Steve "answers" the question.
-                steveAnswer.textContent = `Steve says: That's a great question about math! We'll discuss it at our next meeting. Thanks for asking!`;
-                steveQuestionInput.value = ''; // Clear the textarea
-            } else {
-                steveAnswer.textContent = "Steve: Hmm, looks like you didn't ask a question. Try again!";
-            }
         });
     </script>
 
