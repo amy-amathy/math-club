@@ -182,7 +182,9 @@
             <p><strong>Where:</strong> Room L-7.</p>
             <p><strong>Upcoming Events:</strong></p>
             <ul id="event-list">
-                <!-- Events will be dynamically added here -->
+                <li>September 16th: First Meeting!</li>
+                <li>September 23rd - January 1st: Practice AMC 8 Questions and Learn New AMC 8 Topics</li>
+                <li>January 22nd - 28th: <a href="#amc">AMC 8</a> Competition</li>
             </ul>
             <a href="#top" class="back-to-top">Back to top</a>
         </div>
@@ -190,9 +192,9 @@
         <!-- AMC 8 Info Section -->
         <div id="amc" class="section">
             <h2>About the AMC 8</h2>
-            <p>The AMC 8 is a 25-question, 40-minute, multiple-choice competition for middle school students, focusing on problem-solving skills. It's a great opportunity to test your math abilities against students from around the country. Our club helps members prepare with practice problems and strategies for success.</p>
-            <p><strong>What is it?</strong> A nationally recognized math competition.</p>
-            <p><strong>When is it?</strong> In January this year.</p>
+            <p><strong>What is it?</strong> The AMC 8 is a 25-question, 40-minute, multiple-choice nationally recognized competition for middle school students, focusing on problem-solving skills. It's a great opportunity to test your math abilities against students from around the country.</p>
+            <p>Here is the AMC website for more information: <a href="https://maa.org/student-programs/amc/" target="_blank">https://maa.org/student-programs/amc/</a>.</p>
+            <p><strong>When is it?</strong> The next AMC 8 competition dates are January 22–28, 2026.</p>
             <p><strong>How do we prepare?</strong> We dedicate several meetings to working through past AMC 8 problems and exploring relevant topics.</p>
             <a href="#top" class="back-to-top">Back to top</a>
         </div>
@@ -242,19 +244,6 @@
             const li = document.createElement('li');
             li.textContent = member;
             memberList.appendChild(li);
-        });
-
-        // Add events to calendar
-        const events = [
-            "September 16th: First Meeting!",
-            "September 23rd - January 1st: Practice AMC 8 Questions and Learn New AMC 8 Topics",
-            "January 22nd - 28th: AMC 8 Competition"
-        ];
-        const eventList = document.getElementById('event-list');
-        events.forEach(event => {
-            const li = document.createElement('li');
-            li.textContent = event;
-            eventList.appendChild(li);
         });
     </script>
 
