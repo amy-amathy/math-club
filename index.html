@@ -200,16 +200,8 @@
         <!-- Join Section -->
         <div id="join" class="section">
             <h2>How to Apply or Join</h2>
-            <p>It's easy to join the Math Club! We welcome all students with an interest in mathematics, regardless of experience level. To join, simply fill out the form below. We'll add you to our mailing list and see you at the next meeting!</p>
-            <form id="join-form">
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required>
-                <label for="grade">Grade:</label>
-                <input type="number" id="grade" name="grade" min="6" max="8" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Join the Club!</button>
-            </form>
+            <p>It's easy to join the Math Club! We welcome all students with an interest in mathematics, regardless of experience level. To join, simply fill out the form below. We'll add you to our mailing list and see you at the next meeting!</p>            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuoZeDC3ejesWF1gcrHrz_0yvqpsWpbuQFbOUTlstBy3qM1A/viewform?embedded=true" width="900" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             <p id="join-message" style="display: none; margin-top: 10px;"></p>
             <a href="#top" class="back-to-top">Back to top</a>
         </div>
@@ -268,18 +260,6 @@
             const li = document.createElement('li');
             li.textContent = event;
             eventList.appendChild(li);
-        });
-
-        // Handle "Join the Club" form submission
-        const joinForm = document.getElementById('join-form');
-        const joinMessage = document.getElementById('join-message');
-        joinForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent page reload
-            
-            const fullName = document.getElementById('fullName').value;
-            joinMessage.textContent = `Thanks for your interest, ${fullName}! We've received your application and will be in touch.`;
-            joinMessage.style.display = 'block';
-            joinForm.reset(); // Clear the form
         });
 
         // Handle "Ask Steve" form submission
